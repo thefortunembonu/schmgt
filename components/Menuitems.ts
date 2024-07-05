@@ -1,18 +1,15 @@
 export const MenuItems = [
-    { course: 'Computer science',
-      path: '/csc',
-      cname: 'comp_sci'
+    { name: 'Home',
+      path: '/',
+    
     },
-    { course: 'Electrical Engineering',
-    path: '/eee',
-    cname: 'elect_elect'
+    { name: 'Blog',
+    path: '/blog',
+   
   },
-  { course: 'Mechanical Engineering',
-  path: '/mee',
-  cname: 'mechEng'
+  { name: 'Portal',
+  path: '/portal'
+ 
 },
-{ course: 'Cybersecurity',
-path: '/cyb',
-cname: 'cybersec'
-}
-]
+
+] as const

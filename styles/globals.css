@@ -13,63 +13,71 @@
       }
 
 .primary_btn {
-  @apply bg-blue-700 py-2 px-5 m-3 shadow-sm text-white text-xl border-2 border-blue-700 hover:border-2  hover:border-blue-400 rounded-sm
+  @apply bg-blue-700 py-2.5 px-6 m-3 shadow-sm text-white text-medium  hover:bg-blue-800 hover:scale-95 rounded-lg 
+}
+
+.warning_btn {
+  @apply bg-red-500 py-2.5 px-6 m-3 shadow-sm text-white text-medium hover:bg-red-800 hover:scale-95 rounded-lg
 }
 
 .outline_btn {
-  @apply border-blue-700 border-2 py-2 px-5  m-3 shadow-sm text-xl hover:bg-blue-800  hover:border-blue-400 rounded-sm
+  @apply border-blue-700 border-1  py-2 px-5  m-3 shadow-sm text-medium hover:bg-blue-800 rounded-lg hover:scale-95
 }
 .outline_sec_btn {
-  @apply border-blue-700 border-2 py-2 px-5  m-3 shadow-sm text-xl text-blue-800 hover:bg-blue-800 hover:text-white hover:border-blue-400 rounded-sm
+  @apply border-blue-700 border-1 py-2 px-5  m-3 shadow-sm text-medium  rounded-lg hover:scale-95 hover:bg-blue-700 hover:text-white
 }
 
-
-.dropdownMenu {
-  @apply
-  mt-8
-  h-[100px]
-  w-[250px] 
-  absolute text-start
-  md:mt-4;
-  
+.disabled_primary_btn {
+  @apply bg-gray-400 py-2.5 px-6 m-3 shadow-sm text-white text-medium  rounded-sm
 }
 
-.dropdownMenu li {
-  @apply bg-[#0c0d1a]
-  text-sm
-  cursor-pointer
-  text-white
-  uppercase
-  px-3 py-2 
-  border-y-1 border-gray-900
+.disabled_outline_sec_btn {
+  @apply bg-gray-400 py-2 px-5 m-3 shadow-sm text-white text-medium
 }
 
-.dropdownMenu li:hover {
-  background: #5cabff;
+.dashcardblue {
+  @apply w-full md:w-[500px] sm:h-48 h-24 bg-blue-500 shadow-md rounded-lg md:px-12 md:py-8 py-4 px-4 text-white
+}
+
+.dashcardbluer {
+  @apply w-full md:w-[500px] sm:h-48 h-24 bg-blue-700 shadow-md rounded-lg md:px-12 md:py-8 py-4 px-4 text-white
+}
+
+.sidebtn {
+  @apply flex items-center gap-2 py-4 px-6 w-full text-start mb-1 bg-blue-50 hover:bg-blue-300 md:px-10
+}
+
+.sidebtnactive {
+  @apply flex items-center gap-2 py-4 px-6 w-full text-start mb-1 bg-blue-300  md:px-10
+}
+.notbtn {
+  @apply  bg-red-500 px-1.5 py-1 rounded-full text-white font-bold text-[0.55rem]
 }
 
 .mobdropdownMenu {
   @apply
-  mt-72
-  mb-10
-  w-full
   absolute
-  justify-center
-  text-center
-  md:hidden;
-}
-.mobdropdownMenu li {
-  @apply bg-[#0c0d1a]
-  text-sm
-  cursor-pointer
-  text-white
-  uppercase
-  px-4 py-2 
-  font-bold
-  border-y-1 border-gray-900
+  right-[15px]
+  top-[60px]
+  md:hidden
 }
 
-.mobdropdownMenu li:hover {
+.dropdownbtn{
+  @apply
+  block
+  min-w-[180px]
+  bg-zinc-100
+  text-sm
+  cursor-pointer
+  text-gray-700
+  px-12 py-2 
+  font-semibold
+  rounded-sm
+  border-y-1
+   border-gray-50
+}
+
+.dropdownbtn:hover {
   background: #5cabff;
 }
 
