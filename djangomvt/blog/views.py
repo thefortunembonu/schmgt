@@ -9,16 +9,15 @@ from .models import Blog
 # Create your views here.
 @api_view(['GET'])
 @permission_classes([permissions.AllowAny,])
-def get_blogs(request): 
-    try: 
-        blogs = Blog.objects.filter(is_published=True)
-        if blogs is not None:
-            serializer = BlogSerializer(blogs, many=True)
-            return Response({'blogs': serializer.data})
-        else :
-            return Response({'error': 'No blogs to preview'})
-    except:
-        pass
+def get_blogs(request):
+    try:
+        blogs = Blog.objects.all()
+        serializer = BlogSerializer(blogs, many=True)
+        return Response({'blogs': serializer.data}, status=status.HTTP_200_OK)
+    except Blog.DoesNotExist:
+        return Response({'error': 'No blogs to preview'}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({'error': 'An error occurred while fetching blogs'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
     
 @api_view(['GET'])

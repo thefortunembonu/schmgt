@@ -23,11 +23,6 @@ class GetUserProfile(APIView):
 
 
 
-
-
-
-
-        
 class UpdateUserProfile(APIView):
     def put(self, request, format=None):
         try:

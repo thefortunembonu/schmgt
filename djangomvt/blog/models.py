@@ -34,7 +34,7 @@ class Blog(models.Model):
     content = models.TextField(default='No Content')
     created_by = models.ForeignKey(Account, null=True, blank=True, on_delete=models.DO_NOTHING)
     date_created = models.DateTimeField(auto_now_add=True)
-    img = models.ImageField(upload_to='blog/images')
+    img = models.ImageField(upload_to='blog/images', null=True, blank=True)
     comments = models.ManyToManyField(Comment, blank=True)
     is_published = models.BooleanField(default=False)
     is_blacklisted = models.BooleanField(default=False)

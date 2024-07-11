@@ -11,7 +11,7 @@ from rest_framework.response import Response
 def get_testimonial(request):
   
     if request.method == 'GET':
-        testimonial = Testimonial.objects.filter(is_published=True)
+        testimonial = Testimonial.objects.all()
         serializer = TestimonialSerializer(testimonial, many=True)
         return Response({'testimonials':serializer.data}, status=status.HTTP_200_OK)
     else:
